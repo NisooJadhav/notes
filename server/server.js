@@ -1,6 +1,8 @@
 // CONFIGURING FOR .ENV 
 require("dotenv").config();
 
+const PORT = process.env.PORT;
+
 // IMPORTING PACKAGES
 const express = require("express");
 const cors = require("cors");
@@ -87,4 +89,4 @@ app.put("/update/:id", (req, res) => {
 })
 
 // RUNNING APP ON PORT 3001
-app.listen(3001, () => console.log(`notes server running on 3001`));
+app.listen(3001, () => console.log(`notes server running on ${PORT}`));
